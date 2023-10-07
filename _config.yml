@@ -18,6 +18,8 @@ minima:
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
+google_analytics: G-XXSWEGK6EX
+
 # Build settings
 baseurl: /
 remote_theme: jekyll/minima
