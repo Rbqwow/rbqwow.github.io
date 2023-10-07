@@ -8,3 +8,7 @@ permalink: /about
 Ciallo～(∠・ω< )⌒☆
 
 ᕕ(◠ڼ◠)ᕗ
+
+总之，本网站标注原创内容使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) 许可协议。
+
+<3
