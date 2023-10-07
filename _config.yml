@@ -1,11 +1,13 @@
-title: rbqwow.link
+title: Rbqwow's Blog
+
 author:
   name: Rbqwow
   email: admin@rbqwow.link
-description: >
-  What you see is what I want you to see.
-  Take a deep breath and close your eyes.
-  Why not take a daydream?
+
+description:
+  What you see is what I want you to see. <br>
+  Enjoy yourself and take a good day. <3
+
 minima:
   skin: auto
   date_format: "%F"
@@ -16,16 +18,17 @@ minima:
     - { platform: telegram,       user_url: "https://t.me/rbqwow" }
     - { platform: twitter,        user_url: "https://twitter.com/rbqwow" }
     - { platform: youtube,        user_url: "https://www.youtube.com/channel/UCDlF20IXdd8-ZXZFSakmIWg" }
+  disqus:
+    shortname: rbqwow
 
 show_excerpts: true
 
 google_analytics: G-XXSWEGK6EX
 
-disqus:
-  shortname: rbqwow
-
 baseurl: /
+
 remote_theme: jekyll/minima
+
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
