@@ -4,6 +4,8 @@ author:
   email: admin@rbqwow.link
 description: >
   What you see is what I want you to see.
+  Take a deep breath and close your eyes.
+  Why not take a daydream?
 minima:
   skin: auto
   date_format: "%F"
@@ -14,13 +16,14 @@ minima:
     - { platform: telegram,       user_url: "https://t.me/rbqwow" }
     - { platform: twitter,        user_url: "https://twitter.com/rbqwow" }
     - { platform: youtube,        user_url: "https://www.youtube.com/channel/UCDlF20IXdd8-ZXZFSakmIWg" }
-    - { platform: rss,            user_url: "https://rbqwow.link/feed.xml" }
 
-show_excerpts: true # set to true to show excerpts on the homepage
+show_excerpts: true
 
 google_analytics: G-XXSWEGK6EX
 
-# Build settings
+disqus:
+  shortname: rbqwow
+
 baseurl: /
 remote_theme: jekyll/minima
 plugins:
