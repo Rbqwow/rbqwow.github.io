@@ -1,9 +1,9 @@
 title: rbqwow.link
 author:
   name: Rbqwow
-  email: me@rbqwow.link
+  email: contactme@rbqwow.link
 description: >
-  What you see, is what I want you to see.
+  What you see is what I want you to see.
 minima:
   skin: auto
   date_format: "%F"
@@ -13,8 +13,8 @@ minima:
     - { platform: gitlab,         user_url: "https://gitlab.com/rbqwow" }
     - { platform: telegram,       user_url: "https://t.me/rbqwow" }
     - { platform: twitter,        user_url: "https://twitter.com/rbqwow" }
-    - { platform: youtube,        user_url: "https://www.youtube.com/rbqwow" }
-#    - { platform: rss,            user_url: "https://rbqwow.link/feed.xml" }
+    - { platform: youtube,        user_url: "https://www.youtube.com/channel/UCDlF20IXdd8-ZXZFSakmIWg" }
+    - { platform: rss,            user_url: "https://rbqwow.link/feed.xml" }
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
