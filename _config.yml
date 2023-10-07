@@ -1,5 +1,7 @@
 title: Rbqwow's Blog
 
+tagline: Love and Peace
+
 author:
   name: Rbqwow
   email: admin@rbqwow.link
@@ -7,6 +9,8 @@ author:
 description:
   What you see is what I want you to see. <br>
   Enjoy yourself and take a good day. <3
+
+url: https://rbqwow.link
 
 minima:
   skin: auto
