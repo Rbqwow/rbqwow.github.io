@@ -22,8 +22,9 @@ minima:
     - { platform: telegram,       user_url: "https://t.me/rbqwow" }
     - { platform: twitter,        user_url: "https://twitter.com/rbqwow" }
     - { platform: youtube,        user_url: "https://www.youtube.com/channel/UCDlF20IXdd8-ZXZFSakmIWg" }
-  disqus:
-    shortname: rbqwow
+
+disqus:
+  shortname: rbqwow
 
 show_excerpts: true
 
