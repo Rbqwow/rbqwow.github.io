@@ -1,6 +1,4 @@
 ---
 layout: post
 ---
-Hello, World!
-
-Rbqwow.
+Hello, world!
