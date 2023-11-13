@@ -1,3 +1,3 @@
 # rbqwow.github.io
 
-Thanks to [Minima](https://github.com/jekyll/minima).
+Thanks to [Jekyll](https://jekyllrb.com/) and [Minima](https://github.com/jekyll/minima).
