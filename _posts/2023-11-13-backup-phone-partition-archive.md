@@ -2,7 +2,7 @@
 layout: post
 title: 备份手机字库
 ---
-出处：[https://miuiver.com/backup-phone-partition/](https://miuiver.com/backup-phone-partition/)
+原地址：[https://miuiver.com/backup-phone-partition/](https://miuiver.com/backup-phone-partition/)
 
 由于原网站连接在我这经常出问题，逐复制一份过来。
 

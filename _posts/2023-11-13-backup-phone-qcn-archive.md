@@ -2,7 +2,7 @@
 layout: post
 title: 备份手机 QCN
 ---
-出处：[https://miuiver.com/backup-phone-qcn/](https://miuiver.com/backup-phone-qcn/)
+原地址：[https://miuiver.com/backup-phone-qcn/](https://miuiver.com/backup-phone-qcn/)
 
 由于原网站连接在我这经常出问题，逐复制一份过来。
 
@@ -58,6 +58,6 @@ setprop sys.usb.config diag,adb
 
 ![备份手机 QCN](/img/备份%20QCN/qfil-backup-qcn.png)
 
-如果备份提示 `Backup QCN Fail: Backup QCN Fail Check Connection Fail` 错误，可能是该机型不支持备份。原笔者测试了两台手机，同样方法和操作环境下，其中一台较老机型备份成功，另一台新机怎么都备份失败，原因不详。备用方法可以通过[备份基带]({% post_url 2023-11-13-备份手机字库等-存档 %})来备份（对于恢复串号，基带效果可能不如 QCN 备份）。
+如果备份提示 `Backup QCN Fail: Backup QCN Fail Check Connection Fail` 错误，可能是该机型不支持备份。原笔者测试了两台手机，同样方法和操作环境下，其中一台较老机型备份成功，另一台新机怎么都备份失败，原因不详。备用方法可以通过[备份基带]({% post_url 2023-11-13-backup-phone-partition-archive %})来备份（对于恢复串号，基带效果可能不如 QCN 备份）。
 
 日后如果要恢复手机 QCN，用同样流程点击上图 `Restore QCN` 按钮即可。如果用他人分享的 QCN 备份文件，需要先用支持十六进制的编辑器修改 QCN 里的 MEID 和 IMEI（电脑可以用 Ultraedit，手机可以用 HexEditor 或 MT 管理器）。如果刷了其他人串号，手机将不能解 BL 和存在其它副作用。具体修改方法请自行网上查找。
