@@ -4,7 +4,7 @@ title: 爆改暗影精灵 9
 ---
 [世人苦 OMEN Gaming Hub 久矣](https://www.bilibili.com/video/BV1nGr9YfEAU/)，而我已独善其身。于是他们命我在此书写救世的篇章，我便来了。
 
-[这里]({% post_url 2024-8-12-reinstall-windows-twice %})是前传。我看这 8499 未尝不能和 13999 掰掰手腕。
+[这里]({% post_url 2024-8-12-reinstall-windows-twice %})是前传。我看这 8499 未尝不能和 20999 掰掰手腕。
 
 ## 先来做些前戏
 
