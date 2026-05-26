@@ -39,7 +39,6 @@ title: 爆改暗影精灵 9
    如果你不信任我，那大可关闭页面，我不会责怪你的。
 - 记住自己的 BitLocker 恢复密钥，因为需要短暂关闭安全启动，之后你可以开回来。不要试图只暂停加密而不记住密钥，你会后悔的。未开启 BitLocker 则跳过这一条。
 - Hyper-V 可能导致 ThrottleStop 等工具无法正常变更处理器电压和频率，WSL2 用户有难了。
-- 暗影精灵 9 重置 BIOS 的方式是在内置键盘上按住 Win+V 后短按电源按钮开机，之后不要松开 Win+V，等它亮。
 
 我的碎碎念：
 
@@ -71,22 +70,28 @@ title: 爆改暗影精灵 9
 ## 是时候爆草 BIOS 了
 
 1. 准备好你的 U 盘，把它插上。
-2. 开机连按 F10 进入 BIOS 设置，先重置 BIOS 设置，再关闭安全启动。按 F10 保存并退出。
-3. 开机连按 F9 进入启动项选择，使用你的 U 盘启动，等候片刻。自动回到启动项选择页面后，按 F10 进入 BIOS 设置。
-4. 查看 BIOS 设置首页的底部，选择多出来的 `自定义` 选项并进入。
-5. 寻找以下设置，并将它们修改为对应值。 TODO：列出选项位置
-   - `Overclocking Lock` → 关
-   - `AC Loadline` → 110
-   - `Energy Efficient Turbo` → 关
-   - `Overclocking Feature` → 开
-   - `Thermal Velocity Boost` → 关
-   - `TVB Voltage Optimizations` → 关
-   - `IA CEP` → 关
-   - `Enhanced Thermal Velocity Boost` → 关
-   - `UnderVolt Protection` → 关
-6. 按 F10 保存并退出。
+2. 开机连按 F10 进入 BIOS 设置。
+3. 按 F9 重置 BIOS 设置。
+4. 进入 `启动选项` 页面，关闭 `安全启动模式`。这是必要的**临时**操作，之后你可以再开启。
+5. 按 F10 保存并退出。
+6. 开机连按 F9 进入启动项选择界面，选择通过你的 U 盘启动，等候片刻。
+7. 片刻后，将自动回到刚刚的启动项选择界面。按 F10 进入 BIOS 设置。
+8. 进入 `主要` 页面，选择 `系统信息` - `自定义` 并进入。
+9. 你应该已经进入 `IHV进阶` 界面。寻找以下设置，并将它们修改为对应值。
+   - `Power & Performance` - `CPU - Power Management Control` - `CPU Lock Configuration` - `Overclocking Lock` → Disable
+   - `Power & Performance` - `CPU - Power Management Control` - `CPU VR Settings` - `Core/IA VR Settings` - `AC Loadline` → 110
+   - `Power & Performance` - `CPU - Power Management Control` - `View/Configure Turbo Options` - `Energy Efficient Turbo` → Disable
+   - `OverClocking Performance Menu` - `Overclocking Feature` → Enable
+   - `OverClocking Performance Menu` - `UnderVolt Protection` → Disable
+   - `OverClocking Performance Menu` - `Processor` - `Thermal Velocity Boost` → Disable
+   - `OverClocking Performance Menu` - `Processor` - `TVB Voltage Optimizations` → Disable
+   - `OverClocking Performance Menu` - `Processor` - `Enhanced Thermal Velocity Boost` → Disable
+   - `OverClocking Performance Menu` - `CEP Disable` - `IA CEP Enable` → Disable
+10. 按 F10 保存并退出。
 
-U 盘启动或否只会影响隐藏设置解锁，并不会影响已经修改的设置项。如修改独显等设置可以正常进入修改。
+U 盘启动或否只会影响隐藏设置解锁，并不会影响已经修改的设置项。如修改独显等设置可以通过正常方式进入并修改。
+
+如果你搞坏了什么，导致黑屏无法开机，那就需要重置 BIOS。先确保电源指示灯熄灭，电脑处于完全关机状态，然后在内置键盘上按住 Win+V 后短按电源按钮开机，之后不要松开 Win+V，直到屏幕亮起。
 
 ## 现在是正戏时间
 
@@ -110,7 +115,7 @@ U 盘启动或否只会影响隐藏设置解锁，并不会影响已经修改的
   60 瓦是一个甜点区，不会很卡，也不会呼呼转，日用我很喜欢。打游戏时会凭直觉切到 80 / 100 瓦。
 - `性能控制` - `GPU频率限制` → 还原  
   把这个交给 MSI Afterburner 吧。
-- `浮窗显示` → 显示浮窗 / 36号 / 左上角  
+- `浮窗显示` → 显示浮窗 / 36号 / 左上角
 - `Omen键` → `切换浮窗显示`  
   这浮窗真帅吧，字体小一点感觉更好。绑到 OGH 的遗产上正好可以在挡住东西时快速切换开关。
 - `其他设置` - `开机自启` → 开启  
@@ -221,7 +226,6 @@ CPU,Fan1,Fan2,GPU,Fan1,Fan2
 4. 通过任务计划设置开机自启。
 
    Win+R 输入 `taskschd.msc` 打开任务计划程序，选中右侧 `任务计划程序库`，右键单击，选择 `创建任务(R)...`，填写任务参数：
-
    1. `常规`
       - `名称(M)` → ThrottleStop
       - `使用最高权限运行(I)` → 启用
@@ -248,9 +252,9 @@ CPU,Fan1,Fan2,GPU,Fan1,Fan2
 2. 调整电压/频率曲线
    1. 点击 `VOLTAGE` - `CURVE EDITOR` 进入电压/频率曲线编辑器
    2. 在横轴上找到 `925`，找到曲线上对应的那个点，再向左一个点。
-   3. 一直按住 Shift 键，从刚刚找到的点开始，长按鼠标左键向右拖拽，选中右侧的全部点。
-   4. 一直按住 Shift 键，点击刚刚找到的点。
-   5. 一直按住 Shift 键，双击回车。
+   3. **一直按住 Shift 键**，从刚刚找到的点开始，长按鼠标左键向右拖拽，选中右侧的全部点。
+   4. **一直按住 Shift 键**，点击刚刚找到的点。
+   5. **一直按住 Shift 键**，双击回车。
    6. 松开 Shift 键。
 
    如果选中的点变成一条直线则结束，如果操作失误没有成功，则点击底部保存按钮左侧的恢复按钮重试。
@@ -264,15 +268,15 @@ CPU,Fan1,Fan2,GPU,Fan1,Fan2
 
 需要注意，MSI Afterburner 和 Rivatuner Statistics Server 都是点击最小化会最小化到任务托盘，点击关闭会直接退出。
 
-### 结语
+## Aftercare
 
 至此，暗影精灵 9 爆改完成咯，恭喜你获得了一台双烤 130 瓦 + 140 瓦 的暗影精灵，280 瓦的电源适配器都吓哭了。
 
 你可以使用图吧工具箱中的 `P95一键烤机` 来检验处理器稳定性，使用 `FurMark2` 来检验独立显卡稳定性，亦或同时运行二者，尽情体验不一样的暗影精灵吧。
 
-博客内容可能不够完善，尚待补充，欢迎提出意见或建议，或者单纯提问，说不定就进入常见问题了呢。
+博客内容可能不够完善，尚待补充，欢迎提出意见或建议，或者单纯提问，说不定就会被写进下面的常见问题了呢。
 
-### 常见问题
+## 自由讨论时间
 
 1. 我因为各种理由总之是重置了 BIOS，现在应该补充做哪步？
 
@@ -290,6 +294,6 @@ CPU,Fan1,Fan2,GPU,Fan1,Fan2
 
 - [暗影精灵9重生满血功耗教程（哔哩哔哩）](https://www.bilibili.com/video/BV1jK4aeVEwN/)
 - [OmenSuperHub (GitHub)](https://github.com/breadeding/OmenSuperHub)
-- 所有制作了本博客提供的文件的人
+- 所有制作了本博客使用到的文件的人
 
 感谢所有前人们的探索以根治惠普引以为傲的大厂病。
