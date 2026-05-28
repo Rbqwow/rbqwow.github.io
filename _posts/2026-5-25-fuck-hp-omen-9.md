@@ -185,7 +185,7 @@ CPU,Fan1,Fan2,GPU,Fan1,Fan2
    - `Performance Cores` - `Turbo Groups` - `Ratios` - `Group <0-7>` → 48
    - `Efficiency Cores` - `Turbo Groups` - `Ratios` - `Group 0` → 32
    - `FIVR Control` - `CPU Core` / `CPU P Cache` / `CPU E Cache` - `Unlock Adjustable Voltage` → 启用
-   - `FIVR Control` - `CPU Core` / `CPU P Cache` / `CPU E Cache` - `Offset Voltage` → -89.8
+   - `FIVR Control` - `CPU Core` / `CPU P Cache` / `CPU E Cache` - `Offset Voltage` → -80.1
    - `FIVR Control` - `CPU Core` - `IccMax` → 255.75
    - `Cache Ratio` - `Min / Max` → 8 / 39
    - `Miscellaneous` - `V-Max Stress` / `Ring Down Bin` / `Overclock` → 启用
